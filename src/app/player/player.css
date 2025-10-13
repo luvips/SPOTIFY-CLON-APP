@@ -8,8 +8,11 @@
 }
 
 #main{
-    width: 90%;
+    width: 95%;
     height: 85%;
     display: grid;
     grid-template-columns: 75% 25%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
 }

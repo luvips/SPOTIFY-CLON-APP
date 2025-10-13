@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { booleanAttribute, Component, input, OnInit } from '@angular/core';
 import { Song } from '../interfaces/song';
 
 @Component({
@@ -7,11 +7,14 @@ import { Song } from '../interfaces/song';
   templateUrl: './song-info.html',
   styleUrl: './song-info.css',
   host:{
-    '[class.main-content]': 'main_info',
+    '[class]': 'displayMode()',
   }
 })
-export class SongInfo {
-  main_info = input(false,{ alias: 'isMainInfo'});
+export class SongInfo{
+  display_mode = input.required<string>({ alias: 'displayMode'});
   song = input.required<Song>();
 
+  displayMode(){
+    return this.display_mode();
+  }
 }
