@@ -4,13 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { SongInfo } from './song-info/song-info';
-import { SecondChild } from './second-child/second-child';
+import { AudioController } from './audio-controller/audio-controller';
+import { Playlist } from './playlist/playlist';
+import { Player } from './player/player';
 
 @NgModule({
   declarations: [
     App,
     SongInfo,
-    SecondChild
+    AudioController,
+    Playlist,
+    Player
   ],
   imports: [
     BrowserModule,

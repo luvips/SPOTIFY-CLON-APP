@@ -1,23 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Song } from '../interfaces/song';
 
 @Component({
   selector: 'app-song-info',
   standalone: false,
   templateUrl: './song-info.html',
-  styleUrl: './song-info.css'
+  styleUrl: './song-info.css',
+  host:{
+    '[class.main-content]': 'main_info',
+  }
 })
 export class SongInfo {
-
-  constructor(){
-    console.log("COMPONENTE SONGINFO CREADO");
-  }
-
-  song = {
-    cover: "./media/default_img.jpg",
-    artist: "ARTISTA 1",
-    name: "CANCION 1",
-    url: ""
-
-  }
+  main_info = input(false,{ alias: 'isMainInfo'});
+  song = input.required<Song>();
 
 }
