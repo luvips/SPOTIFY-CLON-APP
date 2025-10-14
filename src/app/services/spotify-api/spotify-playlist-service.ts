@@ -12,15 +12,10 @@ export class SpotifyPlaylistService {
     private _http: HttpClient
   ){ }
 
-  getPlaylist(token: string): Observable<SpotifyPlaylistResponse>{
+  getPlaylist(): Observable<SpotifyPlaylistResponse>{
 
     return this._http.get<SpotifyPlaylistResponse>(
-      "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n",
-      {
-        headers: {
-          'Authorization': "Bearer " + token
-        }
-      }
+      "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n"
     )
 
   }
