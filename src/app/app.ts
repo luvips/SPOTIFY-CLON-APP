@@ -18,8 +18,9 @@ export class App implements OnInit{
 
 
   ngOnInit(): void {
-    this._spotifyLoginService.getToken();
-    console.log("ESTE ES UN LOG DE CONTROL")
+    this._sporifyPlaylistService.getPlaylist().subscribe(
+      (data) => console.log(data)
+    );
   }
 
 }
