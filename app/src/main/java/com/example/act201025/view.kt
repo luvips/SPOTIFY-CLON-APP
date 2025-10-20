@@ -20,7 +20,6 @@ fun Count(
     vm: CountViewModel = viewModel()
 ) {
     val currentCount: Int by vm.count
-
     Column(
         modifier = Modifier
             .fillMaxSize()
