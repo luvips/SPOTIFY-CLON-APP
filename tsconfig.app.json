@@ -2,6 +2,9 @@
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "extends": "./tsconfig.json",
+  "files": [
+    "src/environments/environment.local.ts"
+  ],
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": []
