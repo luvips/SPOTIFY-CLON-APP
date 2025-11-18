@@ -1,66 +1,43 @@
 import { Component } from '@angular/core';
-import { Song } from '../interfaces/song';
+
 
 @Component({
   selector: 'app-player',
   standalone: false,
   templateUrl: './player.html',
-  styleUrl: './player.css'
+  styleUrls: ['./player.css']
 })
 export class Player {
+ 
+  mainSong = {
+    cover: 'https://i.scdn.co/image/ab67616d0000b273c5521a2175333843d759539c',
+    name: 'La Diferencia',
+    artist: 'Enjambre'
+  };
 
-  song = {
-    cover: "https://picsum.photos/200",
-    name: "CANCION 1",
-    artist: "ARTISTA 1"
-  }
 
-  playlist: Song[] = [
+  recentPlayed = [
     {
-      cover: "https://picsum.photos/201",
-      name: "CANCION 1 ESTE TEXTO ES DEMASIADO LARGO",
-      artist: "ARTISTA 1"
+      cover: 'https://i.scdn.co/image/ab67616d00004851f333e8f8399553752c5259b9',
+      name: 'Visita',
+      artist: 'Enjambre',
+      timeAgo: '2 min ago'
     },
     {
-      cover: "https://picsum.photos/202",
-      name: "CANCION 2",
-      artist: "ARTISTA 1"
+      cover: 'https://i.scdn.co/image/ab67616d000048516a3f7b7643365352b626e75b',
+      name: 'Cámara de Faltas',
+      artist: 'Enjambre',
+      timeAgo: '8 min ago'
     },
     {
-      cover: "https://picsum.photos/203",
-      name: "CANCION 3",
-      artist: "ARTISTA 1"
-    },
-    {
-      cover: "https://picsum.photos/204",
-      name: "CANCION 4",
-      artist: "ARTISTA 1"
-    },
-    {
-      cover: "https://picsum.photos/205",
-      name: "CANCION 5",
-      artist: "ARTISTA 1"
-    },
-    {
-      cover: "https://picsum.photos/206",
-      name: "CANCION 6",
-      artist: "ARTISTA 1"
-    },
-    {
-      cover: "https://picsum.photos/207",
-      name: "CANCION 7",
-      artist: "ARTISTA 1"
-    },
-    {
-      cover: "https://picsum.photos/208",
-      name: "CANCION 8",
-      artist: "ARTISTA 1"
-    },
+      cover: 'https://i.scdn.co/image/ab67616d00004851e219e72656312443f65613ad',
+      name: 'Elemento',
+      artist: 'Enjambre',
+      timeAgo: '24 min ago'
+    }
   ];
 
-  constructor(){
-    console.log("COMPONENTE APP CREADO");
+  constructor() {
+    console.log("Reproductor de música cargado con el nuevo diseño.");
   }
-
-
 }

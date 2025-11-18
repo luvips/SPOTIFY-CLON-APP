@@ -1,6 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-*{
-    padding: 0;
-    
-    margin: 0;
+/* Importar la fuente moderna para toda la aplicación */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Estilos base para eliminar márgenes y asegurar que la app ocupe toda la pantalla */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #121212;
+  /* Fondo oscuro principal */
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
 }
