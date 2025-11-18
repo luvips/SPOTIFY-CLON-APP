@@ -1,11 +1,12 @@
-# ARCHIVO DE PRUEBA PARA UN FLUJO DE TRABAJO EN GITHUB
+# ARCHIVO DE PRUEBA PARA UN FLUJO DE TRABAJO EN GITHUB ACTIONS QUE REALIZA DEPLOY EN UN BUCKET S3 DE AWS PARA UNA APLICACION ANGULAR
 name: archivo de deploy para bucket s3 con angular
-
+# Este flujo de trabajo se activa en cada push a la rama main o deploy
 on:
     push:
         branches:
             - main
-            - new-branch
+            - deploy
+
 
 jobs:
     deploy:
